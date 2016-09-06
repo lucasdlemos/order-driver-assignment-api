@@ -111,7 +111,7 @@ end
 
 get '/drivers/pairWithOrders' do
   content_type :json
-  orders = Order.all(:driver_id => nil)
+  orders = Order.all(:driver_id => nil, :order => [ :created_at.asc ])
   orders.each do |order|
     drivers = retrieve_not_busy_drivers(order)
     filtered_drivers = filter_drivers_by_distance(order, drivers)

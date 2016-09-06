@@ -16,6 +16,7 @@ class Order
   property :destination_latitude, Float
   property :destination_longitude, Float
   property :size, Enum[ :small, :large], :default => :small
+  property :created_at, Time, :required => true
 
   belongs_to :driver, :required => false
 end
