@@ -1,6 +1,6 @@
 # order-driver-assignment-api
 
-This project is a sample RESTful API made with **Ruby** and **Sinatra**. It makes a simple order-driver assignment based on some rules:
+This project is a sample RESTful API made with **Ruby** and **Sinatra**. It makes a simple order-driver assignment.
 
 ```
 - The web service accepts lists of driver objects and order objects, in JSON.
@@ -8,7 +8,7 @@ This project is a sample RESTful API made with **Ruby** and **Sinatra**. It make
 - Orders have a name, an origin location, a destination location and an indication of size (large or small.)
 ```
 
-To do the **order-driver mapping** the service follows some rules:
+To do the **order-driver mapping** the service must consider the following rules
 
 ```
 - A driver shouldn’t be paired with any order that is to be picked up more than five miles from their current location.
@@ -232,7 +232,7 @@ Try to make this request using curl
   
 ### Removing an order from a driver
 
-Ok, imagine the driver Lucas wants to reject the first order, so let's remove it.
+Imagine the driver Lucas wants to reject the first order, so let's remove it.
 
   ```
   URL: http://localhost:9292/driver/1/removeOrder/1  HTTP Method: GET
@@ -246,7 +246,7 @@ Try to make this request using curl
   
 ### Automatically distribute orders to drivers
   
-If we want the service to automatically distributes the orders to their available drivers according to it's algorithm, make this call:
+If we want the service to automatically distribute the orders to their available drivers according to it's algorithm, make this call:
   
   ```
   URL: http://localhost:9292/drivers/pairWithOrders  HTTP Method: GET
@@ -256,10 +256,12 @@ Try to make this request using curl
   ```
   curl http://localhost:9292/drivers/pairWithOrders
   ```
+
+The algorithm maps available drivers for each order, prioritizing the oldest.
   
 ### See the final mapping
   
-Now we ask the service to automatically map drivers and orders, let's see the result:
+Now we have asked the service to automatically map drivers and orders, let's see the result:
 
   ```
   curl http://localhost:9292/driver
