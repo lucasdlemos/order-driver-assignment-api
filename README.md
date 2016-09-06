@@ -22,23 +22,23 @@ Let's make the web service up and running.
 
 1. Clone this repository
 
-```
-git clone git@github.com:lucasdlemos/order-driver-assignment-api.git
-```
+  ```
+  git clone git@github.com:lucasdlemos/order-driver-assignment-api.git
+  ```
 
 2. Install [RVM](https://rvm.io/rvm/install/)
 
 3. Install the gem's . Open you terminal at the repository folder and run:
 
-```
-gem install bundler
-bundle install --without production
-```
+  ```
+  gem install bundler
+  bundle install --without production
+  ```
 
 4. Get the server up. Run the command
 
-```
-bundle exec rackup
-```
+  ```
+  bundle exec rackup
+  ```
 
-This will run a server in your local machine running on port ***9292*** . ```http://localhost:9292```
+This will run a server in your local machine running on port ***9292*** . `http://localhost:9292`
