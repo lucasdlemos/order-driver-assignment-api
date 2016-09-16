@@ -179,7 +179,7 @@ Try to make this request using curl:
 Let's create two drivers
 
   ```
-  URL: http://localhost:9292/orders  HTTP Method: POST
+  URL: http://localhost:9292/drivers  HTTP Method: POST
   
   Body
   [
